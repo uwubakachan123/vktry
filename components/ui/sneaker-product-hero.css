@@ -3,7 +3,7 @@
 .snp-fruit-burst{position:absolute;left:50%;top:46%;width:145%;height:112%;pointer-events:none;user-select:none;z-index:0;will-change:transform,opacity;transform-origin:center}
 .snp-fruit-burst>img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none}
 .snp-float,.snp-reflects,.snp-floor{z-index:1}.snp-hint,.snp-stage-index{z-index:2}.snp-loupe{z-index:4}
-@media(max-width:1100px) and (min-width:761px){.snp-fruit-burst{width:170%;height:105%}}
+@media(max-width:1100px) and (min-width:761px){.snp-fruit-burst{width:100%;height:100%}}
 @media(max-width:760px){.snp-fruit-burst{width:142%;height:104%;top:48%}.snp-stage{isolation:isolate}.snp-fruit-burst>img{object-fit:contain}}
 
 .snp-hint{background:#f4f4f1c9;backdrop-filter:blur(8px);border-radius:24px;padding:9px 13px}
