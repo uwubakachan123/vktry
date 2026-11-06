@@ -9,8 +9,9 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "check": "tsc --noEmit",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name vktry-focus --branch main",
-    "preview:pages": "wrangler pages dev dist --ip 127.0.0.1 --port 4173"
+    "deploy": "npm run build && wrangler deploy",
+    "deploy:pages": "npm run build && wrangler pages deploy dist --config wrangler.pages.jsonc --project-name vktry-focus --branch main",
+    "preview:pages": "wrangler pages dev dist --config wrangler.pages.jsonc --ip 127.0.0.1 --port 4173"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
