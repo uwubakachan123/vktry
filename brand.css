@@ -1,0 +1,14 @@
+@font-face{font-family:"Sigokae Demo";src:url("/fonts/sigokae-demo.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+:root{--font-display:"Sigokae Demo",Georgia,serif;--font-body:Inter,Arial,sans-serif}
+html body{font-family:var(--font-body)}
+.hero h1,.page-intro h1,.section-heading h2,.formula h2,.about-content h2,.about-values h3,.tile-caption h3,.newsletter h2,.rush h2,.rush h3,.flavor-notes h2,.flavor-note h3,.shop-bottom h2,.snp-root .snp-title,.snp-root .snp-flavor-heading h2,.play-intro h1,#overlay h3{font-family:var(--font-display);font-weight:400;letter-spacing:0;line-height:1.1;font-synthesis:none}
+.snp-root .snp-word{font-family:var(--font-display);font-weight:400;letter-spacing:0;text-transform:none}
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#06101ee6 0%,#06101eaa 43%,transparent 66%)}
+.hero h1{font-size:clamp(58px,6.1vw,88px)}
+.snp-root .snp-title{font-size:clamp(40px,4.1cqw,63px)}
+.about-content h2{font-size:50px}.rush h2{font-size:100px;line-height:1.02}
+.photo-tile.product-portrait{background:#e7ebf0}.photo-tile.product-portrait>img{object-fit:contain;padding:54px 80px 120px}
+.photo-tile.editorial-portrait>img{object-position:60% center}
+.bag-item img{object-fit:contain;background:#e7ebf0}
+.hero-bottom-meta,.hero-flavor-controls{display:flex;align-items:center;gap:24px}.hero-flavor-controls{gap:18px}.hero-bottom .hero-flavor-name{display:block;font-size:13px;letter-spacing:.1px;text-transform:none;min-width:65px}.hero-next-flavor{border:1px solid #ffffff60;background:#07132666;color:#fff;padding:0 16px;min-height:44px;min-width:135px;font-size:12px;letter-spacing:0;transition:background .2s,border-color .2s;cursor:pointer}.hero-next-flavor:hover:not(:disabled){background:#ffffff19;border-color:#fff}.hero-next-flavor:disabled{opacity:.55;cursor:wait}.snp-tilt>.snp-can{filter:none}
+@media(max-width:760px){.hero-bottom{align-items:center;gap:12px;bottom:22px}.hero-bottom-meta{gap:0}.hero-bottom .hero-flavor-index,.hero-bottom .hero-signature{display:none}.hero-flavor-controls{gap:10px}.hero-bottom .hero-flavor-name{font-size:11px;min-width:55px}.hero-next-flavor{min-width:126px;padding:0 12px;font-size:11px}.hero::after{inset:30% 0 0;background:linear-gradient(transparent,#07132680 45%,#030c1bb3)}.hero h1{font-size:clamp(40px,11.7vw,57px);line-height:1.12}.snp-root .snp-title{font-size:46px}.page-intro h1{font-size:49px;line-height:1.12}.about-content h2{font-size:39px}.rush h2{font-size:80px}.photo-tile.product-portrait>img{padding:30px 65px 95px}.tile-caption h3{font-size:21px}.section-heading h2{font-size:25px}}

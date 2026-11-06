@@ -1,0 +1,36 @@
+VKTRY — instructions to give ChatGPT when replacing images
+
+GLOBAL INSTRUCTION
+Re-prompt the image generator and put the accepted result into the actual website asset files. Do not merely suggest an image, reuse a blurry preview, or call an enlarged file a new high-resolution render. Keep the current cobalt/chrome hero composition and Sigokae website typography. Keep the product separate from its background so Next flavor can move each actual can between foreground and background positions.
+
+QUALITY CHECK BEFORE INSERTING
+Request the highest available NATIVE resolution, ideally at least 2048px tall for each isolated can. Inspect the returned file dimensions and the lettering at 100% before accepting it. Reject soft text, incorrect spelling, waxy metal, halos, blur, and clipped rims. Keep native-resolution PNG masters with transparency and lossless WebP exports. Never add artificial grain, sharpening halos, glow, or a blur filter to the actual can. Match the same silver shape, black vertical VKTRY mark, white flavor name, and colored band across all three flavors. Use the first accepted master as a visual reference for subsequent flavors.
+
+CURRENT FILE FACTS
+The latest generator returned 720 x 1456 source images. The transparent replacements retain those dimensions without enlargement. They are NOT 4K. If those pixels are insufficient for a larger retina or print application, re-prompt with a higher-native-resolution image tool or use a proper 3D product render with vector label artwork. Do not upscale and claim additional detail.
+
+IMAGE 1 — ORIGINAL CAN
+Tell ChatGPT: Re-prompt and regenerate a premium VKTRY Original slim 250ml can, perfectly upright and front-facing, complete pull-tab and base visible, occupying 90% of a portrait 1:2 image. Smooth realistic brushed silver aluminum, clean sharply focused commercial product photography, black bold condensed VKTRY printed vertically upward, small 80mg and 250ml above one cobalt #234DF0 band, white ORIGINAL centered on that band. No extra words, condensation, grain, frost, fruit, bloom, depth-of-field blur, or shadows outside the product. Pure white background for extraction, then produce a clean transparent PNG cutout without losing metal detail. Use maximum native resolution. Preserve exact brand geometry and make label edges crisp. Put the accepted PNG into public/images/original-can.png; regenerate public/motion/vktry/can-original.png and lossless can-original.webp from it. Also replace the mirrored source at images/original-can.png if that folder is retained.
+
+IMAGE 2 — RASPBERRY CAN
+Tell ChatGPT: Attach the accepted Original can as a reference. Re-prompt and regenerate the same exact can, angle, lighting, silver finish, VKTRY typography, 80mg and 250ml placement, scale and framing. Change only the band to raspberry red #B82454 and its white flavor text to RASPBERRY. All lettering must be accurately spelled and sharply focused. No berries, splash, new logo, random small print, condensation, grain, or soft edges. Generate at the highest native resolution, extract a transparent PNG, inspect at 100%, and put the accepted file into public/images/raspberry.png. Rebuild public/motion/vktry/can-raspberry.png and lossless can-raspberry.webp from it; replace the mirrored images/raspberry.png too.
+
+IMAGE 3 — GRAPE CAN
+Tell ChatGPT: Attach the accepted Original can as a reference. Re-prompt and regenerate the identical can, camera, studio lighting, metallic finish, VKTRY wordmark, 80mg and 250ml placement and framing. Change only the band to violet #7651B8 and the white flavor text to GRAPE. Do not add grapes, smoke, fruit, splash, condensation, grain, bloom, or extra words. Keep the can fully visible with razor-sharp label detail. Request maximum native resolution, inspect at 100%, extract a transparent PNG, and put the accepted result into public/images/grape.png. Rebuild public/motion/vktry/can-grape.png and lossless can-grape.webp; replace the mirrored images/grape.png too.
+
+IMAGE 4 — COBALT / CHROME BACKDROP
+Retain the current backdrop by default. If it must be replaced, tell ChatGPT: Re-prompt a new native-resolution 16:10 luxury studio backdrop only, deep midnight cobalt architectural walls, polished undulating chrome across the lower third, cool directional softbox reflections, dark uncluttered negative space on the left for a white headline, empty center-right space for independently composited product cans. NO cans, bottles, lettering, logos, fruit, people, or baked-in product shadows. Preserve the existing composition. Request a native image at least 2880 x 1800 for a 1440px-wide 2x display. Put the accepted background into the source backdrop asset and rebuild public/motion/vktry/backdrop.png and backdrop.webp. Do not recreate the products inside this background.
+
+IMAGE 5 — EDITORIAL CONCRETE / COBALT SCENE
+Tell ChatGPT: Re-prompt only the clean concrete ledge and cobalt fabric BACKGROUND, with directional sunlight and empty space on the right. Do not ask the generator to redraw the can. Place the exact accepted Original transparent can over the new backdrop, preserving its real label and native detail, and export the complete composition to public/images/story.png. Keep the matching editable layers on the Pencil canvas. This prevents a different-looking can appearing on About or the homepage tile.
+
+DERIVED IMAGES — DO NOT RE-PROMPT THESE INDEPENDENTLY
+For mask-original.png, mask-raspberry.png and mask-grape.png: rebuild from the exact alpha channel of each newly accepted can.
+For reflection-original.webp, reflection-raspberry.webp and reflection-grape.webp: rebuild from the corresponding can, flipped vertically and faded. Never generate a different reflection can.
+For contact-shadow.png: preserve a separate soft contact shadow; animate its position and scale with the can's slot.
+For chrome-foreground.png / .webp: re-extract the lower foreground from the accepted backdrop, with matching coordinates.
+For campaign-fallback.png / .webp: recompose the same exact accepted cans over the same backdrop using manifest.json coordinates. Do not generate an unrelated flattened image.
+For poster artwork: update the existing Pencil image fills to the same accepted can masters and re-export the poster. Do not change the poster headline, audience, proof, or call to action.
+
+INSERTION AND VERIFICATION
+Use the filenames expected by src/data/catalog.ts and src/data/hero-scene.json. Rebuild motion derivatives using scripts/prepare-motion-assets.py after replacing the canonical PNGs. Preserve transparency. Do not shrink the source PNG masters. Check the hero in Original, Raspberry, and Grape states; Next flavor must change the actual foreground product while the backdrop and headline stay fixed. Check keyboard activation, mobile cropping, lossless labels, reduced-motion mode, Shop, About, fallback image, and poster consistency. Refresh export ZIP files so the handoff includes the accepted images and these exact instructions.

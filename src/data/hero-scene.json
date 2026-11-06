@@ -1,0 +1,138 @@
+{
+  "version": 2,
+  "flavorOrder": [
+    "original",
+    "raspberry",
+    "grape"
+  ],
+  "defaultFlavor": "original",
+  "imageInstructions": "VKTRY-Image-Replacement-Prompts.txt",
+  "quality": {
+    "sourceCanPixels": [
+      720,
+      1456
+    ],
+    "canExport": "lossless WebP + native PNG",
+    "fallbackPixels": [
+      2880,
+      1800
+    ],
+    "note": "Can masters are native 720x1456, not 4K. Background in the 2x fallback is resampled; this adds no native backdrop detail."
+  },
+  "artboard": {
+    "width": 1440,
+    "height": 900
+  },
+  "baseUrl": "motion/vktry/",
+  "backdrop": "backdrop.webp",
+  "foreground": "chrome-foreground.webp",
+  "shadow": "contact-shadow.png",
+  "fallback": "motion/vktry/campaign-fallback.webp",
+  "products": [
+    {
+      "id": "grape",
+      "x": 1030,
+      "y": 70,
+      "width": 200,
+      "height": 430,
+      "rotation": 4,
+      "depth": 0.35,
+      "float": 8,
+      "duration": 3.7,
+      "phase": 0.8,
+      "shadow": {
+        "x": 1000,
+        "y": 641,
+        "width": 150,
+        "height": 30,
+        "opacity": 0.12
+      },
+      "reflection": {
+        "x": 1000,
+        "y": 660,
+        "width": 150,
+        "height": 44,
+        "opacity": 0.06
+      },
+      "src": "can-grape.webp",
+      "png": "can-grape.png",
+      "mask": "mask-grape.png",
+      "reflectionSrc": "reflection-grape.webp",
+      "nativeWidth": 720,
+      "nativeHeight": 1456,
+      "encoding": "lossless-webp"
+    },
+    {
+      "id": "raspberry",
+      "x": 710,
+      "y": 235,
+      "width": 265,
+      "height": 510,
+      "rotation": -12,
+      "depth": 0.65,
+      "float": 12,
+      "duration": 3.2,
+      "phase": 1.4,
+      "shadow": {
+        "x": 761,
+        "y": 713,
+        "width": 195,
+        "height": 36,
+        "opacity": 0.2
+      },
+      "reflection": {
+        "x": 763,
+        "y": 734,
+        "width": 195,
+        "height": 64,
+        "opacity": 0.09
+      },
+      "src": "can-raspberry.webp",
+      "png": "can-raspberry.png",
+      "mask": "mask-raspberry.png",
+      "reflectionSrc": "reflection-raspberry.webp",
+      "nativeWidth": 720,
+      "nativeHeight": 1456,
+      "encoding": "lossless-webp"
+    },
+    {
+      "id": "original",
+      "x": 1030,
+      "y": 140,
+      "width": 385,
+      "height": 650,
+      "rotation": 16,
+      "depth": 1,
+      "float": 16,
+      "duration": 3.5,
+      "phase": 0,
+      "shadow": {
+        "x": 892,
+        "y": 801,
+        "width": 290,
+        "height": 46,
+        "opacity": 0.25
+      },
+      "reflection": {
+        "x": 899,
+        "y": 818,
+        "width": 275,
+        "height": 88,
+        "opacity": 0.12
+      },
+      "src": "can-original.webp",
+      "png": "can-original.png",
+      "mask": "mask-original.png",
+      "reflectionSrc": "reflection-original.webp",
+      "nativeWidth": 720,
+      "nativeHeight": 1456,
+      "encoding": "lossless-webp"
+    }
+  ],
+  "motion": {
+    "reducedMotion": "Static pose; no float, tilt, parallax or shimmer.",
+    "pointer": "Fine pointer only. Depth-scaled parallax, max 14px x / 8px y.",
+    "visibility": "Pause while outside viewport or while tab is hidden.",
+    "assetType": "Layered 2D product photography, not a 3D model or turntable."
+  }
+}
